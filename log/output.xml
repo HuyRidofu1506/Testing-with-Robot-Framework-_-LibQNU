@@ -1,230 +1,472 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-10-13T05:03:14.026523" rpa="false" schemaversion="5">
-<suite id="s1" name="Font Txt" source="D:\Code\Testing\RobotFramework\LibQNU\testCase\font_txt.robot">
-<test id="s1-t1" name="Test Plus Text" line="16">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-10-13T15:13:29.199679" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="D:\Code\Testing\RobotFramework\LibQNU\testCase\login.robot">
+<test id="s1-t1" name="Login Without Information" line="15">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser" owner="browser_config">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-13T05:03:14.511666" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<msg time="2025-10-13T15:13:29.631830" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
 <arg>${BASE_URL}</arg>
-<arg>chrome</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-13T05:03:14.511338" elapsed="8.916602"/>
+<status status="PASS" start="2025-10-13T15:13:29.631528" elapsed="5.958594"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-13T05:03:23.428408" elapsed="0.041686"/>
+<status status="PASS" start="2025-10-13T15:13:35.590500" elapsed="0.098707"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:29.631081" elapsed="6.058374"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${NEWS_MENU}</arg>
-<arg>2s</arg>
+<arg>${LOGIN_URL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-13T05:03:23.470313" elapsed="0.026446"/>
+<status status="PASS" start="2025-10-13T15:13:35.689654" elapsed="0.089441"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-13T05:03:23.497893" level="INFO">Clicking element '//ul[@id='navigation']//span[contains(text(),'Tin tức')]'.</msg>
-<arg>${NEWS_MENU}</arg>
+<msg time="2025-10-13T15:13:35.779605" level="INFO">Clicking element 'xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]'.</msg>
+<arg>${LOGIN_URL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-13T05:03:23.496970" elapsed="0.216049"/>
+<status status="PASS" start="2025-10-13T15:13:35.779368" elapsed="0.267832"/>
 </kw>
+<status status="PASS" start="2025-10-13T15:13:29.628253" elapsed="6.419160"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${NEWS_PATTERN}</arg>
-<arg>3s</arg>
+<arg>${BTN_LOGIN}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-13T05:03:23.713319" elapsed="0.730054"/>
+<status status="PASS" start="2025-10-13T15:13:36.048434" elapsed="0.669337"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-13T05:03:24.444050" level="INFO">Clicking element '//a[contains(text(),'QNU HƯỚNG TỚI THƯ VIỆN HIỆN ĐẠI VỚI GIẢI PHÁP BẢO ')]'.</msg>
-<arg>${NEWS_PATTERN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-13T05:03:24.443598" elapsed="0.238915"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-10-13T05:03:24.683707" level="INFO">${text_can_click} = ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]</msg>
-<var>${text_can_click}</var>
-<arg>///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-10-13T05:03:24.683182" elapsed="0.000626"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-10-13T05:03:25.521244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-10-13T05:03:25.521486" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
-  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
-Stacktrace:
-	GetHandleVerifier [0x0x7ff6d420e955+80021]
-	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
-	(No symbol) [0x0x7ff6d3f9060f]
-	(No symbol) [0x0x7ff6d3f9816a]
-	(No symbol) [0x0x7ff6d3f9b26f]
-	(No symbol) [0x0x7ff6d3f9b32f]
-	(No symbol) [0x0x7ff6d3fe8107]
-	(No symbol) [0x0x7ff6d3fe8b1c]
-	(No symbol) [0x0x7ff6d403c957]
-	(No symbol) [0x0x7ff6d401126f]
-	(No symbol) [0x0x7ff6d403968a]
-	(No symbol) [0x0x7ff6d4011003]
-	(No symbol) [0x0x7ff6d3fd95d1]
-	(No symbol) [0x0x7ff6d3fda3f3]
-	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
-	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
-	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
-	GetHandleVerifier [0x0x7ff6d422843e+185214]
-	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
-	GetHandleVerifier [0x0x7ff6d4217b94+117460]
-	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
-	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
-	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
-	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
-</msg>
-<arg>${text_can_click}</arg>
-<arg>3s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-10-13T05:03:24.684014" elapsed="0.840492">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
-  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
-Stacktrace:
-	GetHandleVerifier [0x0x7ff6d420e955+80021]
-	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
-	(No symbol) [0x0x7ff6d3f9060f]
-	(No symbol) [0x0x7ff6d3f9816a]
-	(No symbol) [0x0x7ff6d3f9b26f]
-	(No symbol) [0x0x7ff6d3f9b32f]
-	(No symbol) [0x0x7ff6d3fe8107]
-	(No symbol) [0x0x7ff6d3fe8b1c]
-	(No symbol) [0x0x7ff6d403c957]
-	(No symbol) [0x0x7ff6d401126f]
-	(No symbol) [0x0x7ff6d403968a]
-	(No symbol) [0x0x7ff6d4011003]
-	(No symbol) [0x0x7ff6d3fd95d1]
-	(No symbol) [0x0x7ff6d3fda3f3]
-	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
-	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
-	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
-	GetHandleVerifier [0x0x7ff6d422843e+185214]
-	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
-	GetHandleVerifier [0x0x7ff6d4217b94+117460]
-	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
-	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
-	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
-	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
-</status>
-</kw>
-<kw name="Get Style" owner="Browser">
-<var>${co_chu_ban_dau}</var>
-<arg>${text_can_click}</arg>
-<arg>15</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Gets the computed style properties of the element selected by ``selector``.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.524768" elapsed="0.000158"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Cỡ chữ ban đầu: ${co_chu_ban_dau}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.525071" elapsed="0.000096"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>//a[@id='lnkFontPlus']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.525255" elapsed="0.000109"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:36.719276" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:13:36.718468" elapsed="0.396846"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
+<msg time="2025-10-13T15:13:42.118079" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.525489" elapsed="0.000102"/>
+<status status="PASS" start="2025-10-13T15:13:37.116630" elapsed="5.002100"/>
 </kw>
-<kw name="Get Style" owner="Browser">
-<var>${co_chu_moi}</var>
-<arg>${text_can_click}</arg>
-<arg>17</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Gets the computed style properties of the element selected by ``selector``.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.525689" elapsed="0.000118"/>
+<status status="PASS" start="2025-10-13T15:13:36.047685" elapsed="6.071539"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Cỡ chữ mới: ${co_chu_moi}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.526169" elapsed="0.000103"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<var>${so_cu}</var>
-<arg>${co_chu_ban_dau.replace('px','')}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.526414" elapsed="0.000121"/>
-</kw>
-<kw name="Convert To Number" owner="BuiltIn">
-<var>${so_moi}</var>
-<arg>${co_chu_moi.replace('px','')}</arg>
-<doc>Converts the given item to a floating point number.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.526693" elapsed="0.000093"/>
-</kw>
-<if>
-<branch type="IF" condition="${so_moi} &gt; ${so_cu}">
-<kw name="Log" owner="BuiltIn">
-<arg>THÀNH CÔNG: Cỡ chữ tăng từ ${so_cu}px lên ${so_moi}px</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.527020" elapsed="0.000077"/>
-</kw>
-<status status="NOT RUN" start="2025-10-13T05:03:25.526879" elapsed="0.000261"/>
-</branch>
-<branch type="ELSE">
-<kw name="Log" owner="BuiltIn">
-<arg>THẤT BẠI: Cỡ chữ không tăng (${so_cu}px → ${so_moi}px)</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.527308" elapsed="0.000072"/>
-</kw>
-<status status="NOT RUN" start="2025-10-13T05:03:25.527194" elapsed="0.000230"/>
-</branch>
-<status status="NOT RUN" start="2025-10-13T05:03:25.526853" elapsed="0.000611"/>
-</if>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-10-13T05:03:25.528352" elapsed="0.000131"/>
-</kw>
-<msg time="2025-10-13T05:03:25.555112" level="INFO">Starting Browser process C:\Users\Huy\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52745</msg>
-<doc>Test so sánh cỡ chữ với toàn bộ link tin tức</doc>
-<status status="FAIL" start="2025-10-13T05:03:14.510603" elapsed="11.018045">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
-  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
-Stacktrace:
-	GetHandleVerifier [0x0x7ff6d420e955+80021]
-	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
-	(No symbol) [0x0x7ff6d3f9060f]
-	(No symbol) [0x0x7ff6d3f9816a]
-	(No symbol) [0x0x7ff6d3f9b26f]
-	(No symbol) [0x0x7ff6d3f9b32f]
-	(No symbol) [0x0x7ff6d3fe8107]
-	(No symbol) [0x0x7ff6d3fe8b1c]
-	(No symbol) [0x0x7ff6d403c957]
-	(No symbol) [0x0x7ff6d401126f]
-	(No symbol) [0x0x7ff6d403968a]
-	(No symbol) [0x0x7ff6d4011003]
-	(No symbol) [0x0x7ff6d3fd95d1]
-	(No symbol) [0x0x7ff6d3fda3f3]
-	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
-	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
-	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
-	GetHandleVerifier [0x0x7ff6d422843e+185214]
-	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
-	GetHandleVerifier [0x0x7ff6d4217b94+117460]
-	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
-	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
-	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
-	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
-</status>
+<status status="PASS" start="2025-10-13T15:13:29.627475" elapsed="12.492362"/>
 </test>
-<status status="FAIL" start="2025-10-13T05:03:14.035970" elapsed="12.058051"/>
+<test id="s1-t2" name="Login With Invalid Information CardNum" line="18">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:42.127814" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T15:13:42.126941" elapsed="4.759575"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T15:13:46.886930" elapsed="0.073176"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:42.125872" elapsed="4.834843"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:13:46.961327" elapsed="0.072353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:47.034843" level="INFO">Clicking element 'xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:13:47.034173" elapsed="0.330455"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:42.124569" elapsed="5.240418"/>
+</kw>
+<kw name="Input CardNum" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_CARDNUM}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:13:47.366549" elapsed="0.458178"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:47.826077" level="INFO">Typing text '4451190019' into text field '//input[@name='ctl00$phContent$txtCardNum']'.</msg>
+<arg>${TXT_CARDNUM}</arg>
+<arg>${data_login_cardnum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:13:47.825182" elapsed="0.109791"/>
+</kw>
+<arg>${VALID_CARDNUM}</arg>
+<status status="PASS" start="2025-10-13T15:13:47.365826" elapsed="0.569497"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LOGIN}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:13:47.936473" elapsed="0.015234"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:47.952489" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:13:47.952148" elapsed="0.079261"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:13:53.033513" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:13:48.032163" elapsed="5.001602"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:47.935952" elapsed="5.097988"/>
+</kw>
+<kw name="Get Alert Login" owner="login_keywords">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:53.034984" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg time="2025-10-13T15:13:53.045136" level="INFO">${MSG_ALERT_LOGIN} = Số thẻ hoặc mật khẩu không hợp lệ !</msg>
+<var>${MSG_ALERT_LOGIN}</var>
+<arg>action=ACCEPT</arg>
+<arg>timeout=2s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-13T15:13:53.034638" elapsed="0.010704"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${MSG_ALERT_LOGIN}</arg>
+<arg>${MSG_ALERT_LOGIN_CONTENT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-13T15:13:53.045591" elapsed="0.001113"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:13:58.047753" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:13:53.046938" elapsed="5.002276"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:53.034238" elapsed="5.016464"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:42.122853" elapsed="15.928112"/>
+</test>
+<test id="s1-t3" name="Login With Invalid Information Password" line="23">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:13:58.054991" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T15:13:58.054420" elapsed="4.588118"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T15:14:02.643335" elapsed="0.058914"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:58.053716" elapsed="4.648983"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:02.703070" elapsed="0.069769"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:02.774323" level="INFO">Clicking element 'xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:02.773442" elapsed="0.218690"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:58.052928" elapsed="4.939517"/>
+</kw>
+<kw name="Input Pass" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_PASSWORD}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:02.993454" elapsed="0.452273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:03.446421" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtPassword']'.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${data_login_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:03.446035" elapsed="0.081622"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-10-13T15:14:02.992845" elapsed="0.535293"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LOGIN}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:03.530026" elapsed="0.014184"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:03.545633" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:03.544862" elapsed="0.167184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:14:08.713506" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:14:03.712588" elapsed="5.001917"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:03.528901" elapsed="5.185829"/>
+</kw>
+<kw name="Get Alert Login" owner="login_keywords">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:08.716712" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg time="2025-10-13T15:14:08.732015" level="INFO">${MSG_ALERT_LOGIN} = Số thẻ hoặc mật khẩu không hợp lệ !</msg>
+<var>${MSG_ALERT_LOGIN}</var>
+<arg>action=ACCEPT</arg>
+<arg>timeout=2s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-13T15:14:08.716081" elapsed="0.016224"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${MSG_ALERT_LOGIN}</arg>
+<arg>${MSG_ALERT_LOGIN_CONTENT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-13T15:14:08.732995" elapsed="0.000739"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:14:13.736690" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:14:08.734124" elapsed="5.004248"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:08.715193" elapsed="5.023822"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:58.051965" elapsed="15.687377"/>
+</test>
+<test id="s1-t4" name="Login With Invalid Information CardNum And Password" line="28">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:13.751290" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T15:14:13.750935" elapsed="4.559231"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T15:14:18.310562" elapsed="0.091410"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:13.750029" elapsed="4.652872"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:18.404013" elapsed="0.105767"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:18.510750" level="INFO">Clicking element 'xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:18.510336" elapsed="0.325820"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:13.749668" elapsed="5.086839"/>
+</kw>
+<kw name="Input CardNum" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_CARDNUM}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:18.839079" elapsed="0.605440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:19.445794" level="INFO">Typing text '4451190019ZZZ' into text field '//input[@name='ctl00$phContent$txtCardNum']'.</msg>
+<arg>${TXT_CARDNUM}</arg>
+<arg>${data_login_cardnum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.445223" elapsed="0.137339"/>
+</kw>
+<arg>${UNVALID_CARDNUM}</arg>
+<status status="PASS" start="2025-10-13T15:14:18.837136" elapsed="0.745693"/>
+</kw>
+<kw name="Input Pass" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_PASSWORD}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.584115" elapsed="0.022723"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:19.608212" level="INFO">Typing text 'ZXC@123' into text field '//input[@id='ctl00_phContent_txtPassword']'.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${data_login_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.607439" elapsed="0.125841"/>
+</kw>
+<arg>${UNVALID_PASSWORD}</arg>
+<status status="PASS" start="2025-10-13T15:14:19.583269" elapsed="0.150344"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LOGIN}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.734473" elapsed="0.021502"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:19.757645" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.756680" elapsed="0.095313"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:14:24.855360" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:14:19.853257" elapsed="5.002572"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:19.734063" elapsed="5.121895"/>
+</kw>
+<kw name="Get Alert Login" owner="login_keywords">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:24.856547" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<msg time="2025-10-13T15:14:24.865678" level="INFO">${MSG_ALERT_LOGIN} = Số thẻ hoặc mật khẩu không hợp lệ !</msg>
+<var>${MSG_ALERT_LOGIN}</var>
+<arg>action=ACCEPT</arg>
+<arg>timeout=2s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-13T15:14:24.856364" elapsed="0.009429"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${MSG_ALERT_LOGIN}</arg>
+<arg>${MSG_ALERT_LOGIN_CONTENT}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-10-13T15:14:24.865979" elapsed="0.000384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:14:29.866975" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:14:24.866529" elapsed="5.000632"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:24.856118" elapsed="5.011200"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:13.747614" elapsed="16.119835"/>
+</test>
+<test id="s1-t5" name="Login With Valid Information" line="34">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:29.870086" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T15:14:29.869462" elapsed="5.022203"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T15:14:34.891914" elapsed="0.064973"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:29.868824" elapsed="5.088227"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:34.957197" elapsed="0.060134"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:35.017932" level="INFO">Clicking element 'xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:35.017579" elapsed="0.255576"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:29.868459" elapsed="5.404829"/>
+</kw>
+<kw name="Input CardNum" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_CARDNUM}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:35.273703" elapsed="0.592631"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:35.866797" level="INFO">Typing text '4451190019' into text field '//input[@name='ctl00$phContent$txtCardNum']'.</msg>
+<arg>${TXT_CARDNUM}</arg>
+<arg>${data_login_cardnum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:35.866539" elapsed="0.073445"/>
+</kw>
+<arg>${VALID_CARDNUM}</arg>
+<status status="PASS" start="2025-10-13T15:14:35.273448" elapsed="0.666671"/>
+</kw>
+<kw name="Input Pass" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_PASSWORD}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:35.940531" elapsed="0.013587"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:35.954734" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtPassword']'.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${data_login_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:35.954428" elapsed="0.092456"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-10-13T15:14:35.940273" elapsed="0.106796"/>
+</kw>
+<kw name="Click Login Button" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LOGIN}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T15:14:36.047829" elapsed="0.037823"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:36.086086" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T15:14:36.085862" elapsed="0.060055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-13T15:14:41.146635" level="INFO">Slept 5 seconds.</msg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-13T15:14:36.146102" elapsed="5.000755"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:36.047357" elapsed="5.099606"/>
+</kw>
+<kw name="Check Username" owner="login_keywords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-13T15:14:41.147744" level="INFO">Verifying element '//span[@id='ctl00_phContent_lblPatronName']' contains exact text 'Cao Nguyễn Xuân Huy'.</msg>
+<arg>${LABEL_USERNAME}</arg>
+<arg>${SHOULD_NAME}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-10-13T15:14:41.147439" elapsed="0.024366"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:41.147117" elapsed="0.024854"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:29.867773" elapsed="11.304304"/>
+</test>
+<kw name="Close Browser Web" owner="browser_config" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-13T15:14:41.172827" elapsed="12.317911"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:14:41.172601" elapsed="12.318740"/>
+</kw>
+<status status="PASS" start="2025-10-13T15:13:29.216960" elapsed="84.274617"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Font Txt" id="s1" pass="0" fail="1" skip="0">Font Txt</stat>
+<stat name="Login" id="s1" pass="5" fail="0" skip="0">Login</stat>
 </suite>
 </statistics>
 <errors>
