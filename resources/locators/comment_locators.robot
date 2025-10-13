@@ -1,0 +1,13 @@
+*** Variables ***
+${COMMENT_URL}      //ul[@id='navigation']//li//a[@href='GopY.aspx']
+#${COMMENT_URL}      //ul[@id='navigation']//li//a[@href='GopY.aspx']//span[contains(text(),'Góp ý')]
+${TXT_NAME}         //input[@id='ctl00_phContent_txtFullName']
+${TXT_CARDNUM}      //input[@id='ctl00_phContent_txtCardNumber']
+${TXT_EMAIL}        //input[@id='ctl00_phContent_txtEmailAddress']
+${TXT_TITLE}        //input[@id='ctl00_phContent_txtTitle']
+${TXT_CONTENT}      //textarea[@id='ctl00_phContent_txtContent']
+${BTN_SEND}         //input[@id='ctl00_phContent_btnSend']
+${BTN_RESET}        //input[@id='ctl00_phContent_btnReset']
+${CONDITION_NAME}       //span[@id='ctl00_phContent_RequiredFieldValidator2']
+${CONDITION_EMAIL}      //span[@id='ctl00_phContent_RequiredFieldValidator1']
+${CONDITION_CONTENT}    //span[@id='ctl00_phContent_rqvalidContent']

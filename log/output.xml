@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-10-13T05:03:14.026523" rpa="false" schemaversion="5">
+<suite id="s1" name="Font Txt" source="D:\Code\Testing\RobotFramework\LibQNU\testCase\font_txt.robot">
+<test id="s1-t1" name="Test Plus Text" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-13T05:03:14.511666" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-13T05:03:14.511338" elapsed="8.916602"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-13T05:03:23.428408" elapsed="0.041686"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NEWS_MENU}</arg>
+<arg>2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T05:03:23.470313" elapsed="0.026446"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T05:03:23.497893" level="INFO">Clicking element '//ul[@id='navigation']//span[contains(text(),'Tin tức')]'.</msg>
+<arg>${NEWS_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T05:03:23.496970" elapsed="0.216049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NEWS_PATTERN}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-13T05:03:23.713319" elapsed="0.730054"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-13T05:03:24.444050" level="INFO">Clicking element '//a[contains(text(),'QNU HƯỚNG TỚI THƯ VIỆN HIỆN ĐẠI VỚI GIẢI PHÁP BẢO ')]'.</msg>
+<arg>${NEWS_PATTERN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-13T05:03:24.443598" elapsed="0.238915"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-10-13T05:03:24.683707" level="INFO">${text_can_click} = ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]</msg>
+<var>${text_can_click}</var>
+<arg>///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-10-13T05:03:24.683182" elapsed="0.000626"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-10-13T05:03:25.521244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-13T05:03:25.521486" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
+  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6d420e955+80021]
+	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
+	(No symbol) [0x0x7ff6d3f9060f]
+	(No symbol) [0x0x7ff6d3f9816a]
+	(No symbol) [0x0x7ff6d3f9b26f]
+	(No symbol) [0x0x7ff6d3f9b32f]
+	(No symbol) [0x0x7ff6d3fe8107]
+	(No symbol) [0x0x7ff6d3fe8b1c]
+	(No symbol) [0x0x7ff6d403c957]
+	(No symbol) [0x0x7ff6d401126f]
+	(No symbol) [0x0x7ff6d403968a]
+	(No symbol) [0x0x7ff6d4011003]
+	(No symbol) [0x0x7ff6d3fd95d1]
+	(No symbol) [0x0x7ff6d3fda3f3]
+	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
+	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
+	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
+	GetHandleVerifier [0x0x7ff6d422843e+185214]
+	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
+	GetHandleVerifier [0x0x7ff6d4217b94+117460]
+	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
+	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
+	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
+	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
+</msg>
+<arg>${text_can_click}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-13T05:03:24.684014" elapsed="0.840492">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
+  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6d420e955+80021]
+	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
+	(No symbol) [0x0x7ff6d3f9060f]
+	(No symbol) [0x0x7ff6d3f9816a]
+	(No symbol) [0x0x7ff6d3f9b26f]
+	(No symbol) [0x0x7ff6d3f9b32f]
+	(No symbol) [0x0x7ff6d3fe8107]
+	(No symbol) [0x0x7ff6d3fe8b1c]
+	(No symbol) [0x0x7ff6d403c957]
+	(No symbol) [0x0x7ff6d401126f]
+	(No symbol) [0x0x7ff6d403968a]
+	(No symbol) [0x0x7ff6d4011003]
+	(No symbol) [0x0x7ff6d3fd95d1]
+	(No symbol) [0x0x7ff6d3fda3f3]
+	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
+	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
+	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
+	GetHandleVerifier [0x0x7ff6d422843e+185214]
+	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
+	GetHandleVerifier [0x0x7ff6d4217b94+117460]
+	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
+	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
+	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
+	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
+</status>
+</kw>
+<kw name="Get Style" owner="Browser">
+<var>${co_chu_ban_dau}</var>
+<arg>${text_can_click}</arg>
+<arg>15</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Gets the computed style properties of the element selected by ``selector``.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.524768" elapsed="0.000158"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Cỡ chữ ban đầu: ${co_chu_ban_dau}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.525071" elapsed="0.000096"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[@id='lnkFontPlus']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.525255" elapsed="0.000109"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.525489" elapsed="0.000102"/>
+</kw>
+<kw name="Get Style" owner="Browser">
+<var>${co_chu_moi}</var>
+<arg>${text_can_click}</arg>
+<arg>17</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Gets the computed style properties of the element selected by ``selector``.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.525689" elapsed="0.000118"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Cỡ chữ mới: ${co_chu_moi}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.526169" elapsed="0.000103"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<var>${so_cu}</var>
+<arg>${co_chu_ban_dau.replace('px','')}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.526414" elapsed="0.000121"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<var>${so_moi}</var>
+<arg>${co_chu_moi.replace('px','')}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.526693" elapsed="0.000093"/>
+</kw>
+<if>
+<branch type="IF" condition="${so_moi} &gt; ${so_cu}">
+<kw name="Log" owner="BuiltIn">
+<arg>THÀNH CÔNG: Cỡ chữ tăng từ ${so_cu}px lên ${so_moi}px</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.527020" elapsed="0.000077"/>
+</kw>
+<status status="NOT RUN" start="2025-10-13T05:03:25.526879" elapsed="0.000261"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>THẤT BẠI: Cỡ chữ không tăng (${so_cu}px → ${so_moi}px)</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.527308" elapsed="0.000072"/>
+</kw>
+<status status="NOT RUN" start="2025-10-13T05:03:25.527194" elapsed="0.000230"/>
+</branch>
+<status status="NOT RUN" start="2025-10-13T05:03:25.526853" elapsed="0.000611"/>
+</if>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-10-13T05:03:25.528352" elapsed="0.000131"/>
+</kw>
+<msg time="2025-10-13T05:03:25.555112" level="INFO">Starting Browser process C:\Users\Huy\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52745</msg>
+<doc>Test so sánh cỡ chữ với toàn bộ link tin tức</doc>
+<status status="FAIL" start="2025-10-13T05:03:14.510603" elapsed="11.018045">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression ///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///span[contains(text(),'Từ ngày 05-10/9/2025, Trường Đại học Quy Nhơn phối')]' is not a valid XPath expression.
+  (Session info: chrome=141.0.7390.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6d420e955+80021]
+	GetHandleVerifier [0x0x7ff6d420e9b0+80112]
+	(No symbol) [0x0x7ff6d3f9060f]
+	(No symbol) [0x0x7ff6d3f9816a]
+	(No symbol) [0x0x7ff6d3f9b26f]
+	(No symbol) [0x0x7ff6d3f9b32f]
+	(No symbol) [0x0x7ff6d3fe8107]
+	(No symbol) [0x0x7ff6d3fe8b1c]
+	(No symbol) [0x0x7ff6d403c957]
+	(No symbol) [0x0x7ff6d401126f]
+	(No symbol) [0x0x7ff6d403968a]
+	(No symbol) [0x0x7ff6d4011003]
+	(No symbol) [0x0x7ff6d3fd95d1]
+	(No symbol) [0x0x7ff6d3fda3f3]
+	GetHandleVerifier [0x0x7ff6d44cdd0d+2960461]
+	GetHandleVerifier [0x0x7ff6d44c7fca+2936586]
+	GetHandleVerifier [0x0x7ff6d44e8a07+3070279]
+	GetHandleVerifier [0x0x7ff6d422843e+185214]
+	GetHandleVerifier [0x0x7ff6d422fe8f+216527]
+	GetHandleVerifier [0x0x7ff6d4217b94+117460]
+	GetHandleVerifier [0x0x7ff6d4217d4f+117903]
+	GetHandleVerifier [0x0x7ff6d41fdc28+11112]
+	BaseThreadInitThunk [0x0x7ffba74ce8d7+23]
+	RtlUserThreadStart [0x0x7ffba93e8d9c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-10-13T05:03:14.035970" elapsed="12.058051"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Font Txt" id="s1" pass="0" fail="1" skip="0">Font Txt</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
