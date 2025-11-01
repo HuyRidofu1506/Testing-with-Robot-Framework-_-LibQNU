@@ -1,6 +1,6 @@
 *** Variables ***
-${LOGIN_URL}        xpath://ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]
-${TXT_CARDNUM}      //input[@name='ctl00$phContent$txtCardNum']
+${BTN_WEB_LOGIN}        //ul[@id='navigation']//li//a[@href='dangnhap.aspx']
+${TXT_CARDNUM}      //input[@id='ctl00_phContent_txtCardNum']
 ${TXT_PASSWORD}     //input[@id='ctl00_phContent_txtPassword']
 ${BTN_LOGIN}        xpath://input[@id='ctl00_phContent_btnLogin']
 ${LABEL_USERNAME}   //span[@id='ctl00_phContent_lblPatronName']

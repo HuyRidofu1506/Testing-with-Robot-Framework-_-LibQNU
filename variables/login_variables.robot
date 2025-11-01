@@ -1,7 +1,2 @@
 *** Variables ***
-${VALID_CARDNUM}    4451190019
-${VALID_PASSWORD}    4451190019
-${UNVALID_CARDNUM}    4451190019ZZZ
-${UNVALID_PASSWORD}    ZXC@123
-${SHOULD_NAME}      Cao Nguyễn Xuân Huy
-${MSG_ALERT_LOGIN_CONTENT}    Số thẻ hoặc mật khẩu không hợp lệ !
+${URL_LOGIN}        https://lib.qnu.edu.vn/dangnhap.aspx
