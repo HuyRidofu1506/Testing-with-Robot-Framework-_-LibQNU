@@ -1,199 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-11-01T23:16:24.096723" rpa="false" schemaversion="5">
-<suite id="s1" name="Comment Send Cmt" source="D:\Code\Testing\RobotFramework\LibQNU\tests\comment\comment_send_cmt.robot">
-<test id="s1-t1" name="Send Comment To Lib_QNU With Information" line="15">
-<kw name="Go To Comment Web" owner="comment_keywords" type="SETUP">
-<kw name="Open Basic Browser" owner="browser_config">
+<robot generator="Robot 7.3.2 (Python 3.13.0 on win32)" generated="2025-11-30T22:50:06.746264" rpa="false" schemaversion="5">
+<suite id="s1" name="Borrow Request Document Traditional" source="D:\Code\Testing\RobotFramework\LibQNU\test_cases\7_borrow_request_book\borrow_request_document_traditional.robot">
+<test id="s1-t1" name="View Document Traditional" line="16">
+<kw name="Go To Login Web" owner="login_keywords" type="SETUP">
+<kw name="Open Basic Browser With Chrome" owner="browser_config">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:25.007551" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
+<msg time="2025-11-30T22:50:07.583366" level="INFO">Opening browser 'chrome' to base url 'https://lib.qnu.edu.vn/'.</msg>
 <arg>${BASE_URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${BROWSER_CHROME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-01T23:16:25.007207" elapsed="5.236365"/>
+<status status="PASS" start="2025-11-30T22:50:07.583050" elapsed="2.858816"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-01T23:16:30.244043" elapsed="0.045298"/>
+<status status="PASS" start="2025-11-30T22:50:10.442850" elapsed="0.055080"/>
 </kw>
-<status status="PASS" start="2025-11-01T23:16:25.006655" elapsed="5.283167"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NAGIVATION_HOME}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:10.498754" elapsed="0.055810"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:10.556330" level="INFO">Clicking element '//ul[@id='navigation']//li//a[@href='Index.aspx']'.</msg>
+<arg>${NAGIVATION_HOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:10.555388" elapsed="1.549790"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:07.582434" elapsed="4.523252"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BTN_WEB_LOGIN}</arg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:30.290223" elapsed="0.071627"/>
+<status status="PASS" start="2025-11-30T22:50:12.106288" elapsed="0.032558"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:30.363665" level="INFO">Clicking element '//ul[@id='navigation']//li//a[@href='dangnhap.aspx']'.</msg>
+<msg time="2025-11-30T22:50:12.140510" level="INFO">Clicking element '//ul[@id='navigation']//li//a[@href='dangnhap.aspx']'.</msg>
 <arg>${BTN_WEB_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:30.362647" elapsed="0.450293"/>
+<status status="PASS" start="2025-11-30T22:50:12.139558" elapsed="0.416379"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${COMMENT_URL}</arg>
-<arg>${DEFAULT_TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:30.814548" elapsed="0.747670"/>
+<status status="PASS" start="2025-11-30T22:50:07.581860" elapsed="4.974399"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:31.564769" level="INFO">Clicking element '//ul[@id='navigation']//li//a[@href='GopY.aspx']'.</msg>
-<arg>${COMMENT_URL}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:31.563131" elapsed="0.569293"/>
-</kw>
-<status status="PASS" start="2025-11-01T23:16:25.006164" elapsed="7.126843"/>
-</kw>
-<kw name="Send Comment">
-<kw name="Input Name" owner="comment_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_NAME}</arg>
-<arg>${DEFAULT_TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.137052" elapsed="0.037404"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:32.176301" level="INFO">Typing text 'Cao Nguyễn Xuân Huy' into text field '//input[@id='ctl00_phContent_txtFullName']'.</msg>
-<arg>${TXT_NAME}</arg>
-<arg>${data_cmt_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.175306" elapsed="0.292103"/>
-</kw>
-<arg>${data_cmt_name}</arg>
-<status status="PASS" start="2025-11-01T23:16:32.135901" elapsed="0.332123"/>
-</kw>
-<kw name="Input CardNum" owner="comment_keywords">
+<kw name="View Document Traditional Template">
+<kw name="Input CardNum" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TXT_CARDNUM}</arg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.470389" elapsed="0.078889"/>
+<status status="PASS" start="2025-11-30T22:50:12.559062" elapsed="0.039700"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:32.551269" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtCardNumber']'.</msg>
+<msg time="2025-11-30T22:50:12.600596" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtCardNum']'.</msg>
 <arg>${TXT_CARDNUM}</arg>
-<arg>${data_cmt_cardNum}</arg>
+<arg>${data_login_cardnum}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.550144" elapsed="0.243516"/>
+<status status="PASS" start="2025-11-30T22:50:12.599515" elapsed="0.210913"/>
 </kw>
-<arg>${data_cmt_cardNum}</arg>
-<status status="PASS" start="2025-11-01T23:16:32.468765" elapsed="0.325232"/>
+<arg>${data_login_cardnum}</arg>
+<status status="PASS" start="2025-11-30T22:50:12.558160" elapsed="0.252629"/>
 </kw>
-<kw name="Input Email" owner="comment_keywords">
+<kw name="Input Pass" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_EMAIL}</arg>
+<arg>${TXT_PASSWORD}</arg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.795565" elapsed="0.043817"/>
+<status status="PASS" start="2025-11-30T22:50:12.811996" elapsed="0.031237"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:32.841529" level="INFO">Typing text 'huycao1506@gmail.com' into text field '//input[@id='ctl00_phContent_txtEmailAddress']'.</msg>
-<arg>${TXT_EMAIL}</arg>
-<arg>${data_cmt_email}</arg>
+<msg time="2025-11-30T22:50:12.844856" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtPassword']'.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${data_login_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:32.840342" elapsed="0.339748"/>
+<status status="PASS" start="2025-11-30T22:50:12.843927" elapsed="0.175400"/>
 </kw>
-<arg>${data_cmt_email}</arg>
-<status status="PASS" start="2025-11-01T23:16:32.794428" elapsed="0.386201"/>
+<arg>${data_login_password}</arg>
+<status status="PASS" start="2025-11-30T22:50:12.811219" elapsed="0.208577"/>
 </kw>
-<kw name="Input Title" owner="comment_keywords">
+<kw name="Click Login Button" owner="login_keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_TITLE}</arg>
+<arg>${BTN_LOGIN}</arg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:33.184236" elapsed="0.044744"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:33.231310" level="INFO">Typing text 'Tải tài liệu' into text field '//input[@id='ctl00_phContent_txtTitle']'.</msg>
-<arg>${TXT_TITLE}</arg>
-<arg>${data_cmt_title}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:33.230113" elapsed="0.298196"/>
-</kw>
-<arg>${data_cmt_title}</arg>
-<status status="PASS" start="2025-11-01T23:16:33.182304" elapsed="0.346481"/>
-</kw>
-<kw name="Input Content" owner="comment_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${TXT_CONTENT}</arg>
-<arg>${DEFAULT_TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:33.531210" elapsed="0.044965"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:33.578124" level="INFO">Typing text 'Hiện tại tài liệu trong web thư viện không tải được, em mong bên thư viện sớm sửa lỗi này.' into text field '//textarea[@id='ctl00_phContent_txtContent']'.</msg>
-<arg>${TXT_CONTENT}</arg>
-<arg>${data_cmt_content}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:33.577043" elapsed="0.466084"/>
-</kw>
-<arg>${data_cmt_content}</arg>
-<status status="PASS" start="2025-11-01T23:16:33.529481" elapsed="0.514029"/>
-</kw>
-<kw name="Click Send Button" owner="comment_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BTN_SEND}</arg>
-<arg>${DEFAULT_TIMEOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-01T23:16:34.045240" elapsed="0.035699"/>
+<status status="PASS" start="2025-11-30T22:50:13.021562" elapsed="0.035702"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:16:34.082904" level="INFO">Clicking button '//input[@id='ctl00_phContent_btnSend']'.</msg>
-<arg>${BTN_SEND}</arg>
+<msg time="2025-11-30T22:50:13.058955" level="INFO">Clicking button 'xpath://input[@id='ctl00_phContent_btnLogin']'.</msg>
+<arg>${BTN_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-01T23:16:34.081622" elapsed="22.261209"/>
+<status status="PASS" start="2025-11-30T22:50:13.057980" elapsed="0.451688"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-01T23:17:01.344981" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-30T22:50:18.513193" level="INFO">Slept 5 seconds.</msg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-01T23:16:56.343248" elapsed="5.002348"/>
+<status status="PASS" start="2025-11-30T22:50:13.511143" elapsed="5.002650"/>
 </kw>
-<status status="PASS" start="2025-11-01T23:16:34.044181" elapsed="27.301857"/>
+<status status="PASS" start="2025-11-30T22:50:13.020473" elapsed="5.493694"/>
 </kw>
-<kw name="Get Alert Comment" owner="comment_keywords">
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-11-01T23:17:01.350602" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
-<msg time="2025-11-01T23:17:01.369955" level="INFO">${MSG_ALERT_COMMENT} = Không thực hiện được việc gửi thư  do lỗi:  </msg>
-<var>${MSG_ALERT_COMMENT}</var>
-<arg>action=ACCEPT</arg>
-<arg>timeout=2s</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-11-01T23:17:01.349525" elapsed="0.021437"/>
+<kw name="Click Home Page" owner="browser_config">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NAGIVATION_HOME}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:18.515902" elapsed="0.049101"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MSG_ALERT_COMMENT}</arg>
-<arg>${msg_alert_cmt_conten}</arg>
-<arg>collapse_spaces=True</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-11-01T23:17:01.372240" elapsed="0.001859"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:18.566589" level="INFO">Clicking element '//ul[@id='navigation']//li//a[@href='Index.aspx']'.</msg>
+<arg>${NAGIVATION_HOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:18.565779" elapsed="0.983569"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:18.514849" elapsed="1.034942"/>
+</kw>
+<kw name="Input Keyword In Search Box" owner="search_document_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_SEARCH_BOX}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.552069" elapsed="0.040809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:19.594503" level="INFO">Typing text 'Khoa học' into text field '//input[@id='ctl00_phContent_ucPortalCenterRightBoxSearch_txtText']'.</msg>
+<arg>${TXT_SEARCH_BOX}</arg>
+<arg>${data_keyword_search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.593544" elapsed="0.149234"/>
+</kw>
+<arg>${data_keyword_search}</arg>
+<status status="PASS" start="2025-11-30T22:50:19.550441" elapsed="0.192675"/>
+</kw>
+<kw name="Choose Radio Button Traditional" owner="search_document_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_RADIO_TRADITIONAL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.744587" elapsed="0.033126"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:19.779305" level="INFO">Clicking element '//input[@id='ctl00_phContent_ucPortalCenterRightBoxSearch_optThuvienTruyenThong']'.</msg>
+<arg>${BTN_RADIO_TRADITIONAL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.778479" elapsed="0.153671"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:19.743656" elapsed="0.188845"/>
+</kw>
+<kw name="Click Search Button" owner="search_document_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_SEARCH}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.933542" elapsed="0.026389"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:19.961343" level="INFO">Clicking element '//a[@id='ctl00_phContent_ucPortalCenterRightBoxSearch_btnPatronLogon']'.</msg>
+<arg>${BTN_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:19.960678" elapsed="0.130974"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-01T23:17:06.376030" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-11-30T22:50:25.094029" level="INFO">Slept 5 seconds.</msg>
 <arg>${DEFAULT_TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-01T23:17:01.374656" elapsed="5.001728"/>
+<status status="PASS" start="2025-11-30T22:50:20.092330" elapsed="5.002162"/>
 </kw>
-<arg>${msg_alert_cmt_content}</arg>
-<status status="PASS" start="2025-11-01T23:17:01.346995" elapsed="5.029599"/>
+<status status="PASS" start="2025-11-30T22:50:19.932927" elapsed="5.162159"/>
 </kw>
-<arg>data_cmt_name=Cao Nguyễn Xuân Huy</arg>
-<arg>data_cmt_cardNum=4451190019</arg>
-<arg>data_cmt_email=huycao1506@gmail.com</arg>
-<arg>data_cmt_title=Tải tài liệu</arg>
-<arg>data_cmt_content=Hiện tại tài liệu trong web thư viện không tải được, em mong bên thư viện sớm sửa lỗi này.</arg>
-<arg>msg_alert_cmt_content=Không thực hiện được việc gửi thư  do lỗi: </arg>
-<status status="PASS" start="2025-11-01T23:16:32.133986" elapsed="34.242783"/>
+<kw name="Click 1 Document Traditional To View" owner="borrow_request_book_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${1_DOCUMENT_TRADITIONAL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.096324" elapsed="0.040342"/>
 </kw>
-<status status="PASS" start="2025-11-01T23:16:25.004518" elapsed="41.372570"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:25.137697" level="INFO">Clicking element '//a[@href='TraCuuTaiLieuTruyenThong2Xem.aspx?intItemID=339']'.</msg>
+<arg>${1_DOCUMENT_TRADITIONAL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.137123" elapsed="0.589345"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:25.095581" elapsed="0.631361"/>
+</kw>
+<kw name="Check Title Form View Detail Traditional Document" owner="borrow_request_book_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TITLE_FORM_VIEW_DOCUMENT_TRADITIONAL}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.730160" elapsed="0.056753"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:25.727732" elapsed="0.059641"/>
+</kw>
+<kw name="Input DKCB Number To Borrow Request" owner="borrow_request_book_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_DKCB}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.788450" elapsed="0.023547"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:25.813161" level="INFO">Typing text '4451190019' into text field '//input[@id='ctl00_phContent_txtCopyNumber']'.</msg>
+<arg>${TXT_DKCB}</arg>
+<arg>${data_dkcb}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.812476" elapsed="0.135950"/>
+</kw>
+<arg>${data_dkcb}</arg>
+<status status="PASS" start="2025-11-30T22:50:25.787830" elapsed="0.160970"/>
+</kw>
+<kw name="Input Valid Date To Borrow Request" owner="borrow_request_book_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TXT_VALID_DATE}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.950776" elapsed="0.037273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:25.989912" level="INFO">Typing text '30/12/2025' into text field '//input[@id='ctl00_phContent_txtValidDate']'.</msg>
+<arg>${TXT_VALID_DATE}</arg>
+<arg>${data_vaild_date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:25.988773" elapsed="0.220940"/>
+</kw>
+<arg>${data_vaild_date}</arg>
+<status status="PASS" start="2025-11-30T22:50:25.949542" elapsed="0.260469"/>
+</kw>
+<kw name="Click Reser Button To Borrow Request" owner="borrow_request_book_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_RESER}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T22:50:26.211330" elapsed="0.045950"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-30T22:50:26.258916" level="INFO">Clicking element '//input[@id='ctl00_phContent_btnReser']'.</msg>
+<arg>${BTN_RESER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T22:50:26.258043" elapsed="0.386792"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:26.210562" elapsed="0.434653"/>
+</kw>
+<arg>data_login_cardnum=4451190019</arg>
+<arg>data_login_password=4451190019</arg>
+<arg>data_keyword_search=Khoa học</arg>
+<arg>data_dkcb=4451190019</arg>
+<arg>data_vaild_date=30/12/2025</arg>
+<status status="PASS" start="2025-11-30T22:50:12.556774" elapsed="14.088689"/>
+</kw>
+<status status="PASS" start="2025-11-30T22:50:07.580294" elapsed="19.065817"/>
 </test>
 <kw name="Close Browser Web" owner="browser_config" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-01T23:17:06.379307" elapsed="2.235432"/>
+<status status="PASS" start="2025-11-30T22:50:26.650705" elapsed="2.268564"/>
 </kw>
-<status status="PASS" start="2025-11-01T23:17:06.378768" elapsed="2.236172"/>
+<status status="PASS" start="2025-11-30T22:50:26.649323" elapsed="2.270243"/>
 </kw>
-<status status="PASS" start="2025-11-01T23:16:24.111272" elapsed="44.503736"/>
+<status status="PASS" start="2025-11-30T22:50:06.759008" elapsed="22.160625"/>
 </suite>
 <statistics>
 <total>
@@ -202,9 +265,11 @@
 <tag>
 </tag>
 <suite>
-<stat name="Comment Send Cmt" id="s1" pass="1" fail="0" skip="0">Comment Send Cmt</stat>
+<stat name="Borrow Request Document Traditional" id="s1" pass="1" fail="0" skip="0">Borrow Request Document Traditional</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-11-30T22:50:06.999587" level="WARN">Imported resource file 'D:\Code\Testing\RobotFramework\LibQNU\variables\borrow_request_book_variables.robot' is empty.</msg>
+<msg time="2025-11-30T22:50:07.002588" level="WARN">Imported resource file 'D:\Code\Testing\RobotFramework\LibQNU\variables\search_document_variables.robot' is empty.</msg>
 </errors>
 </robot>

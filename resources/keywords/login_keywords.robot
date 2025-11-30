@@ -8,7 +8,7 @@ Resource    ../../config/browser_config.robot
 
 *** Keywords ***
 Go To Login Web
-    Open Basic Browser
+    Open Basic Browser With Chrome
     SeleniumLibrary.Wait Until Element Is Visible    ${BTN_WEB_LOGIN}   ${DEFAULT_TIMEOUT}
     SeleniumLibrary.Click Element    ${BTN_WEB_LOGIN}
 
@@ -40,3 +40,7 @@ Get Alert Login
     ${MSG_ALERT_LOGIN}=     SeleniumLibrary.Handle Alert    action=ACCEPT   timeout=2s
     Should Be Equal    ${MSG_ALERT_LOGIN}    ${MSG_ALERT_LOGIN_CONTENT}
     Sleep   ${DEFAULT_TIMEOUT}
+
+Click Logout Button
+    SeleniumLibrary.Wait Until Element Is Visible    ${BTN_LOGOUT}  ${DEFAULT_TIMEOUT}
+    SeleniumLibrary.Click Element    ${BTN_LOGOUT}

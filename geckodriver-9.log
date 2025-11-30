@@ -1,0 +1,19 @@
+1764494903892	geckodriver	INFO	Listening on 127.0.0.1:52720
+1764494907037	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52721" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Huy\\AppData\\Local\\Temp\\rust_mozprofilefZW4pu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1764494908700	Marionette	INFO	Marionette enabled
+1764494908975	Marionette	INFO	Listening on port 57674
+WebDriver BiDi listening on ws://127.0.0.1:52721
+Read port: 57674
+1764494909354	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://lib.qnu.edu.vn/assets/js/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1764494923112	Marionette	INFO	Stopped listening on port 57674
+Dynamically enable window occlusion 1
+console.error: "Failed to fetch https://spocs.getpocket.com/user:" "NetworkError when attempting to fetch resource."
+console.error: (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: (new Error("OHTTP was configured for https://ads.mozilla.org/v1/delete_user but we couldn't fetch a valid config", "moz-src:///browser/modules/ContextId.sys.mjs", 234))
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/ObliviousHTTP.sys.mjs, line 105: NS_ERROR_XPC_CANT_CONVERT_PRIMITIVE_TO_ARRAY: Cannot convert primitive JavaScript value into an array arg 2 [nsIObliviousHttpService.newChannel]
+JavaScript error: resource://services-settings/RemoteSettingsClient.sys.mjs, line 102: Error: Unknown callback

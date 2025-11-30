@@ -1,0 +1,15 @@
+*** Variables ***
+${LOGO_HOME}    //a[@id='logo']//img
+${NAGIVATION_HOME}      //ul[@id='navigation']//li//a[@href='Index.aspx']
+${NAGIVATION_INTRODUCE}     //ul[@id='navigation']//li//a[@href='#']//span[contains(text(),'Giới thiệu')]
+${NAGIVATION_NEWS}      //ul[@id='navigation']//span[contains(text(),'Tin tức')]
+${NAGIVATION_DOC_SEARCH}      //ul[@id='navigation']//li//a[@href='Default.aspx']//span[contains(text(),'Tra cứu tài liệu')]
+${NAGIVATION_BUSINESS}      //ul[@id='navigation']//li//a[@href='#']//span[contains(text(),'Nghiệp vụ')]
+${NAGIVATION_PROD_SERV}      //ul[@id='navigation']//li//a[@href='#']//span[contains(text(),'Sản phẩm - Dịch vụ')]
+${NAGIVATION_HELP}      //ul[@id='navigation']//li//a[@href='#']//span[contains(text(),'Trợ giúp')]
+${NAGIVATION_CONTACT}      //ul[@id='navigation']//li//a[@href='TrangTinLienHe.aspx']
+${NAGIVATION_LOGIN}     //ul[@id='navigation']//li//a[@href='dangnhap.aspx']//span[contains(text(),'Đăng nhập')]
+${BOX_SEARCH}       //input[@id='ctl00_phContent_ucPortalCenterRightBoxSearch_txtText']
+${BTN_SEARCH}       //a[@id='ctl00_phContent_ucPortalCenterRightBoxSearch_btnPatronLogon']
+${LANGUAGE_VN}       //input[@id='ctl00_ucPortalCenterMenuBottom_imgVn']
+${LANGUAGE_ENG}       //input[@id='ctl00_ucPortalCenterMenuBottom_imgEn']

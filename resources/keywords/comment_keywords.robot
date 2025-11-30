@@ -10,7 +10,7 @@ Resource    ../../config/browser_config.robot
 
 *** Keywords ***
 Go To Comment Web
-    Open Basic Browser
+    Open Basic Browser With Chrome
     SeleniumLibrary.Wait Until Element Is Visible    ${BTN_WEB_LOGIN}   ${DEFAULT_TIMEOUT}
     SeleniumLibrary.Click Element    ${BTN_WEB_LOGIN}
     SeleniumLibrary.Wait Until Element Is Visible    ${COMMENT_URL}     ${DEFAULT_TIMEOUT}
