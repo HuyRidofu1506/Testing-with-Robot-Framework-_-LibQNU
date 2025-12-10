@@ -60,7 +60,7 @@ Check Submenu Introduce Organizational Official
     Should Be Equal As Strings    ${current_url}    ${URL_INTRODUCE_ORGANIZATIONAL_OFFICIALS}
 
 Check Submenu Introduce Organizational Union
-    SeleniumLibrary.Wait Until Element Is Visible    ${SUBMENU_INTRODUCE_ORGANIZATIONAL}    ${DEFAULT_TIMEOUT}
+ #   SeleniumLibrary.Wait Until Element Is Visible    ${SUBMENU_INTRODUCE_ORGANIZATIONAL}    ${DEFAULT_TIMEOUT}
     SeleniumLibrary.Mouse Over    ${SUBMENU_INTRODUCE_ORGANIZATIONAL}
     SeleniumLibrary.Wait Until Element Is Visible    ${SUBMENU_INTRODUCE_ORGANIZATIONAL_UNION}   ${DEFAULT_TIMEOUT}
     SeleniumLibrary.Click Element    ${SUBMENU_INTRODUCE_ORGANIZATIONAL_UNION}

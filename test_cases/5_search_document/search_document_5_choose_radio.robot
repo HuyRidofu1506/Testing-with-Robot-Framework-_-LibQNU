@@ -11,6 +11,7 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Choose Radio Button
+#Choose Radio Button
+TC052 - Kiểm tra radio chọn loại tìm kiếm
     Choose Radio Button Digital
     Choose Radio Button Traditional

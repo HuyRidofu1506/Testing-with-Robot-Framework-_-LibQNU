@@ -1,0 +1,1 @@
+{"uuid": "2028d101-1c74-49a2-9287-37790850ce5a", "children": ["dae2269f-d957-4df1-ab89-e9b8dda5acc6"], "afters": [{"name": "browser_config.Close Browser Web", "status": "passed", "statusDetails": {}, "steps": [{"name": "SeleniumLibrary.Close All Browsers", "status": "passed", "statusDetails": {}, "start": 1765262541204, "stop": 1765262543413}], "stop": 1765262543413}]}

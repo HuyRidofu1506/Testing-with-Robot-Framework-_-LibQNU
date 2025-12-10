@@ -9,6 +9,7 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Check Navigation Contact In Contact Navigation
+#Check Navigation Contact In Contact Navigation
+TC028 - Kiểm tra điều hướng sang "Liên hệ"
     Check Nagivation Contact
 

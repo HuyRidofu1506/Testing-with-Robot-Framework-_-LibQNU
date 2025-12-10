@@ -10,7 +10,7 @@ Open Basic Browser With Chrome
     SeleniumLibrary.Open Browser    ${BASE_URL}     ${BROWSER_CHROME}
     SeleniumLibrary.Maximize Browser Window
     SeleniumLibrary.Wait Until Element Is Visible       ${NAGIVATION_HOME}      ${DEFAULT_TIMEOUT}
-    SeleniumLibrary.Click Element    ${NAGIVATION_HOME}        
+    SeleniumLibrary.Click Element    ${NAGIVATION_HOME}
 
 Open Basic Browser With Firefox
     SeleniumLibrary.Open Browser    ${BASE_URL}     ${BROWSER_FIREFOX}
@@ -29,3 +29,4 @@ Back
 Click Home Page
     SeleniumLibrary.Wait Until Element Is Visible    ${NAGIVATION_HOME}     ${DEFAULT_TIMEOUT}
     SeleniumLibrary.Click Element    ${NAGIVATION_HOME}
+

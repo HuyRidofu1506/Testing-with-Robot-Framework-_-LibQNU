@@ -11,5 +11,6 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Search Traditional Document With Data
+#Search Traditional Document With Data
+TC051 - Tìm kiếm khi không nhập từ khóa
     Click Search Button

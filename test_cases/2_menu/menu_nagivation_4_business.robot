@@ -9,10 +9,12 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Check Submenu Business Operations In Business Navigation
+#Check Submenu Business Operations In Business Navigation
+TC016 - Kiểm tra điều hướng sang "Nghiệp vụ thư viện"
     Check Nagivation Business
     Check Submenu Business Operations
 
-Check Submenu Business Legal In Business Navigation
+#Check Submenu Business Legal In Business Navigation
+TC017 - Kiểm tra điều hướng sang "Văn bản quy phạm pháp luật"
     Check Nagivation Business
     Check Submenu Business Legal

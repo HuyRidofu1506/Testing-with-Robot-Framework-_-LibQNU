@@ -4,7 +4,7 @@ Resource        ../../config/browser_config.robot
 Resource        ../../resources/keywords/comment_keywords.robot
 Resource        ../../variables/global_variables.robot
 Resource        ../../variables/comment_variables.robot
-Library     DataDriver   ../../data/data_comment.xlsx  sheet_name=Sheet1
+Library     DataDriver   ../../data/data_comment.xlsx  sheet_name=Sheet3
 
 Test Setup          Go To Comment Web
 Suite Teardown      Close Browser Web

@@ -9,15 +9,18 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Check Submenu News Actitives In News Navigation
+#Check Submenu News Actitives In News Navigation
+TC011 - Kiểm tra điều hướng sang "Tin hoạt động"
     Check Nagivation News
     Check Submenu News Activities
 
-Check Submenu News Actitives In News Navigation
+#Check Submenu News Actitives In News Navigation
+TC012 - Kiểm tra điều hướng sang "Tin thông báo"
     Check Nagivation News
     Check Submenu News Notifications
 
-Check Submenu News Actitives In News Navigation
+#Check Submenu News Actitives In News Navigation
+TC013 - Kiểm tra điều hướng sang "Tin video"
     Check Nagivation News
     Check Submenu News Videos
 

@@ -9,5 +9,6 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Check Navigation Login In Login Navigation
+#Check Navigation Login In Login Navigation
+TC029 - Kiểm tra điều hướng sang "Đăng nhập"
     Check Nagivation Login

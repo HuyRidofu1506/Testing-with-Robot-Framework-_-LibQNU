@@ -6,7 +6,7 @@ Resource        ../../variables/global_variables.robot
 
 
 *** Test Cases ***
-Open Web With Browsers
+TC001 - Kiểm tra tương thích trình duyệt
     Open Basic Browser With Chrome
     Open Basic Browser With Firefox
     Open Basic Browser With Edge

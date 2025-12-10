@@ -9,11 +9,13 @@ Suite Teardown      Close Browser Web
 
 
 *** Test Cases ***
-Check Submenu Search Traditional In Search Navigation
+#Check Submenu Search Traditional In Search Navigation
+TC014 - Kiểm tra điều hướng sang "Tra cứu Thư viện Truyền Thống"
     Check Nagivation Search
     Check Submenu Search Traditional
 
-Check Submenu Search Digital In Search Navigation
+#Check Submenu Search Digital In Search Navigation
+TC015 - Kiểm tra điều hướng sang "Tra cứu Thư viện Số"
     Check Nagivation Search
     Check Submenu Search Digital
 
